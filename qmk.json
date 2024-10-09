@@ -1,6 +1,9 @@
 {
     "userspace_version": "1.0",
     "build_targets": [
-        ["ferris/sweep", "lysquid"]
+        [
+            "planck/rev5",
+            "thooams"
+        ]
     ]
 }

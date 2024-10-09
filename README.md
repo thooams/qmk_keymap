@@ -1,6 +1,7 @@
-A QMK keymap for the [Sweep][sweep], a split keyboard with 34 keys. It makes extensive use of layers to fit all keys, and uses callum-style mods.
+A QMK keymap for the [Planck][planck], a keyboard with 47 keys. It makes extensive use of layers to fit all keys, and uses callum-style mods.
+Based on the [Lysquid's work][https://github.com/Lysquid/qmk_keymap].
 
-[sweep]: https://github.com/davidphilipbarr/Sweep
+[planck]: https://olkb.com/collections/planck
 
 ## Features
 
@@ -28,7 +29,7 @@ A QMK keymap for the [Sweep][sweep], a split keyboard with 34 keys. It makes ext
 [Full version][keymap-full], with mouse layer and key overrides.
 
 [keymap]: keymap.svg
-[keymap-full]: https://raw.githubusercontent.com/Lysquid/qmk_keymap/lysquid/keymap_full.svg
+[keymap-full]: https://raw.githubusercontent.com/thooams/qmk_keymap/thooams/keymap_full.svg
 
 ## Special behaviors
 
@@ -65,15 +66,14 @@ A QMK keymap for the [Sweep][sweep], a split keyboard with 34 keys. It makes ext
 - A tap on `NAV`, `SYM` or `shift` exits the mouse layer.
 - `erglce` stands for [Erglace][erglace], my custom layout. It can be switched with AZERTY (including the one shot special characters layer, see the [keymap definition][keymap.c]).
 
-[keymap.c]: keyboards/ferris/keymaps/lysquid/keymap.c
+[keymap.c]: keyboards/planck/keymaps/thooams/keymap.c
 
 ## Installation
 
 - Install the [QMK CLI][qmk cli] (available on Arch repos as `qmk`)
 - Download the latest [release][releases]
-- Run `qmk flash ferris_sweep_lysquid.hex`
+- Run `qmk flash planck_thooams.hex`
 - Put your keyboard in bootloader mode (with a `boot` key or a reset button)
-- If you are flashing your keyboard for the first time, you must flash the two sides separately with the flags `-bl avrdude-split-left` and `-bl avrdude-split-right`
 
 [qmk cli]: https://docs.qmk.fm/#/newbs_getting_started?id=set-up-your-environment
 [releases]: /releases

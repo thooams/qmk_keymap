@@ -1,10 +1,10 @@
 #pragma once
 
 #include QMK_KEYBOARD_H
-#include "../../../../users/lysquid/french.h"
-#include "../../../../users/lysquid/oneshot.h"
-#include "../../../../users/lysquid/swapper.h"
-#include "../../../../users/lysquid/unicodes.h"
+#include "../../../../users/thooams/french.h"
+#include "../../../../users/thooams/oneshot.h"
+#include "../../../../users/thooams/swapper.h"
+#include "../../../../users/thooams/unicodes.h"
 
 
 // FRENCH
