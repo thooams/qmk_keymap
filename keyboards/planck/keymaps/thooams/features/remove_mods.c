@@ -27,6 +27,12 @@ void save_incompatible_mods(uint16_t keycode, keyrecord_t *record) {
             removed_mods = MOD_MASK_CSAG;
         }
         break;
+    case KF_WBAK:
+    case KF_WFWD:
+        if (mod_layer_on) {
+            removed_mods = MOD_MASK_CG;
+        }
+        break;
     case KF_WPRV:
     case KF_WNXT:
         if (mod_layer_on) {
@@ -69,21 +75,21 @@ void save_incompatible_mods(uint16_t keycode, keyrecord_t *record) {
             removed_mods = MOD_MASK_CAG;
         }
         break;
-    #ifdef FRENCH
-    case KF_RARW:
-    case KF_LARW:
     case KF_RAQT:
     case KF_LAQT:
+    case KF_EURO:
+    #ifdef AZERTY
+    case KF_RARW:
+    case KF_LARW:
     case KF_MDOT:
     case KF_BDOT:
-    case KF_EURO:
     case KF_SUP2:
     case KF_UNDS:
+    #endif
         if (IS_LAYER_ON(SPC) || IS_LAYER_ON(SPC2)) {
             removed_mods = MOD_MASK_SHIFT;
         }
         break;
-    #endif
     }
 
     // Disable shift on symbol layer

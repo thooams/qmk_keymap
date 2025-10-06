@@ -108,7 +108,7 @@ KEYMAP = [
         "right": [
             ["«", "»", "·", "ç", "°"],
             ["€", "à", "â", "_", "caps word"],
-            ["“", "”", "µ", "≠", "×"],
+            ["“", "”", "µ", "±", "×"],
         ],
         "thumbs": {"left": ["NAV", "'"], "right": ["shift", "SYM"],},
     },
@@ -160,9 +160,9 @@ KEYMAP = [
     {
         "optional": True,
         "left": [
-            ["", "save", "close tab", "sleep", ""],
+            ["", "del", "close tab", "", ""],
             ["alt", "super", "shift", held("ctrl"), ""],
-            ["del", "close app", "term copy", "power off", ""],
+            ["", "save", "term copy", "", ""],
         ],
         "right": [
             ["", "", "", "", ""],

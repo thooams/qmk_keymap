@@ -2,7 +2,7 @@
 #include "../features.h"
 
 
-void update_key_tri_layer(
+static void update_key_tri_layer(
     uint8_t layer,
     uint16_t key,
     uint8_t tri_layer,
@@ -44,4 +44,6 @@ void update_key_tri_layers(uint16_t keycode, keyrecord_t *record) {
     update_key_tri_layer(NAV, OS_LCTL, NAV_CTL,
         &nav_ctl_key_down, keycode, record, 0
     );
+    // Cannot do a layer for NUM+Shift for Keypad numbers because certain
+    // shortcuts need the shift, even in AZERTY, like Super+Shift+Num
 }

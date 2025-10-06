@@ -1,6 +1,6 @@
 #include "swapper.h"
 
-void update_swapper(
+bool update_swapper(
     bool *active,
     uint16_t cmdish,
     uint16_t tabish,
@@ -23,8 +23,10 @@ void update_swapper(
     } else if (keycode == reverse_trigger) {
         if (*active) {
             if (record->event.pressed) {
+                del_mods(MOD_MASK_CTRL);
                 register_code(KC_LSFT);
                 register_code(tabish);
+                return true;
             } else {
                 unregister_code(KC_LSFT);
                 unregister_code(tabish);
@@ -36,4 +38,5 @@ void update_swapper(
             *active = false;
         }
     }
+    return false;
 }

@@ -32,11 +32,12 @@ enum keycodes {
     OS_BTN1,
     OS_BTN2,
     OS_BTN3,
+    NAV_LCK,
     SW_ESC,
     SW_TAB,
     SW_GRV,
     KC_HSCL,
-    #ifdef FRENCH
+    #ifdef AZERTY
     KF_ACRC,
     KF_ECRC,
     KF_OCRC,
@@ -45,7 +46,5 @@ enum keycodes {
     KF_EDIA,
     KF_IDIA,
     KF_UDIA,
-    #else
-    KF_DIAE,
     #endif
 };

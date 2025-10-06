@@ -7,7 +7,14 @@
 #include "../../../../users/thooams/unicodes.h"
 
 
-// FRENCH
+// ALT CODES
+
+// Use alt codes on Windows to input special characters such as accented letters
+bool windows_alt_codes(uint16_t keycode, keyrecord_t *record);
+
+
+
+// AZERTY
 
 // Handle all dead key accents
 void dead_key_accents(uint16_t keycode, keyrecord_t *record);
@@ -70,7 +77,15 @@ void instant_gui(uint16_t keycode, keyrecord_t *record);
 
 
 
-// OVERRIDES
+// DEFAULT LAYER
+
+// Permanently set the default layer,
+// unlike DF(LAYER) that sets it until next reboot
+void persistent_default_layer(uint16_t keycode, keyrecord_t *record);
+
+
+
+// UNICODE OVERRIDES
 
 // Override keys with unicode character (not possible with QMK key override)
 bool overrides_with_unicode(uint16_t keycode, keyrecord_t *record);
@@ -83,7 +98,6 @@ bool overrides_with_unicode(uint16_t keycode, keyrecord_t *record);
 // It should be placed near the end of the process function.
 void save_incompatible_mods(uint16_t keycode, keyrecord_t *record);
 
-
 // Restore the incompatible mods after the key has been pressed without it
 void restore_incompatible_mods(void);
 
@@ -92,4 +106,4 @@ void restore_incompatible_mods(void);
 // SWAPPERS
 
 // Update all swappers, providing Alt+Tab like behavior with one key
-void update_swappers(uint16_t keycode, keyrecord_t *record);
+bool update_swappers(uint16_t keycode, keyrecord_t *record);

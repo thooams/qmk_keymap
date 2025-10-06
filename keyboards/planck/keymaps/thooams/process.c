@@ -9,17 +9,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     override |= nav_layer_lock(keycode, record);
     override |= oneshot_mouse_buttons(keycode, record);
     override |= overrides_with_unicode(keycode, record);
+    override |= windows_alt_codes(keycode, record);
+    override |= update_swappers(keycode, record);
     update_oneshots(keycode, record);
-    update_swappers(keycode, record);
     half_scroll(keycode, record);
     instant_gui(keycode, record);
+    persistent_default_layer(keycode, record);
 
-    #ifdef FRENCH
+    #ifdef AZERTY
     dead_key_accents(keycode, record);
     override |= french_caps_word_fix(keycode, record);
     process_uppercase_dk_accents(keycode, record);
-    #else
-    override |= diaeresis_accent(keycode, record, KF_DIAE);
     #endif
 
     save_incompatible_mods(keycode, record);
@@ -31,7 +31,7 @@ void post_process_record_user(uint16_t keycode, keyrecord_t *record) {
     restore_incompatible_mods();
     update_key_tri_layers(keycode, record);
     clear_mouse_layer(keycode, record);
-    #ifdef FRENCH
+    #ifdef AZERTY
     post_process_uppercase_dk_accents(keycode, record);
     #endif
 }
